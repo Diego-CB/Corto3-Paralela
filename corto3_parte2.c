@@ -42,7 +42,6 @@ int main(int argc, char** argv) {
     int maximo;
     MPI_Reduce(&vector, &maximo, 1, MPI_INT, MPI_MAX, 0, MPI_COMM_WORLD);
 
-    // Cada proceso imprime los resultados
     if (world_rank == 0) {
         printf("suma: %d\n", suma);
         printf("Producto: %d\n", producto);
